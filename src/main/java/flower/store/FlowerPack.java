@@ -1,9 +1,13 @@
 package flower.store;
 
 public class FlowerPack {
-    private Flower flower;
-    private int quantity;
+    private final Flower flower;
+    private final int quantity;
     public int getPrice(){
-        return 0;
+        return (int)flower.getPrice()*quantity;
+    }
+    public <T extends Flower> FlowerPack(T flower, int quantity){
+        this.flower = flower;
+        this.quantity = quantity;
     }
 }
