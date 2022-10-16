@@ -1,2 +1,4 @@
-package flower.store;public class FlowerBucket {
+package flower.store;
+
+public class FlowerBucket {
 }
