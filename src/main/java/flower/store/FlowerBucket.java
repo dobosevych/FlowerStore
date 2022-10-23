@@ -2,14 +2,13 @@ package flower.store;
 
 import lombok.Getter;
 
-public class FlowerBucket{
+public class FlowerBucket {
     @Getter
     private int price = 0;
-
-    public FlowerBucket(){
+    public FlowerBucket() {
 
     }
-    public void add(FlowerPack fp){
+    public void add(FlowerPack fp) {
         price += fp.getPrice();
     }
 }
