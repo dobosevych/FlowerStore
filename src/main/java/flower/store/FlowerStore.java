@@ -15,12 +15,13 @@ import java.util.Scanner;
  */
 
 public class FlowerStore {
+    private static final
+    FlowerInventory FLOWER_INVENTORY = new FlowerInventory();
     /**
      * constructor
      */
     private FlowerStore() { }
-    private static final
-    FlowerInventory FLOWER_INVENTORY = new FlowerInventory();
+
 
     /**
      * the main  method
@@ -29,10 +30,8 @@ public class FlowerStore {
 
     public static void main(String[] args) {
         Flower redFlower = new Flower(10, FlowerColor.RED, 0.5);
-        Flower blueFlower = FlowerFactory
-                .createFlower(30, FlowerColor.BLUE, 2);
-        Flower whiteFlower = FlowerFactory
-                .createFlower(100, FlowerColor.WHITE, 10);
+        Flower blueFlower = new Flower(30, FlowerColor.BLUE, 2);
+        Flower whiteFlower = new Flower(100, FlowerColor.WHITE, 10);
         FLOWER_INVENTORY.addFlower(redFlower);
         FLOWER_INVENTORY.addFlower(blueFlower);
         FLOWER_INVENTORY.addFlower(whiteFlower);
