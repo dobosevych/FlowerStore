@@ -3,7 +3,6 @@ package flower.store;
 
 import flower.store.flower.Flower;
 import flower.store.flower.FlowerColor;
-import flower.store.flower.FlowerFactory;
 import flower.store.flower.FlowerSpec;
 
 import java.util.List;
@@ -17,6 +16,7 @@ import java.util.Scanner;
 public class FlowerStore {
     private static final
     FlowerInventory FLOWER_INVENTORY = new FlowerInventory();
+
     /**
      * constructor
      */
@@ -29,12 +29,13 @@ public class FlowerStore {
      */
 
     public static void main(String[] args) {
-        Flower redFlower = new Flower(10, FlowerColor.RED, 0.5);
-        Flower blueFlower = new Flower(30, FlowerColor.BLUE, 2);
-        Flower whiteFlower = new Flower(100, FlowerColor.WHITE, 10);
-        FLOWER_INVENTORY.addFlower(redFlower);
-        FLOWER_INVENTORY.addFlower(blueFlower);
-        FLOWER_INVENTORY.addFlower(whiteFlower);
+//        !!!!!!UNCOMMENT TO HAVE A WORKING INVENTORY!!!!!!!
+//        Flower redFlower = new Flower(10.0, FlowerColor.RED, 0.5);
+//        Flower blueFlower = new Flower(30.0, FlowerColor.BLUE, 2.0);
+//        Flower whiteFlower = new Flower(100.0, FlowerColor.WHITE, 10.0);
+//        FLOWER_INVENTORY.addFlower(redFlower);
+//        FLOWER_INVENTORY.addFlower(blueFlower);
+//        FLOWER_INVENTORY.addFlower(whiteFlower);
 
         Scanner sc = new Scanner(System.in);
         System.out.print("Please, enter the color: ");

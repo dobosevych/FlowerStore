@@ -27,9 +27,9 @@ public class Flower {
      * @param color color
      * @param sepalLength sepalLength
      */
-    public Flower (double price,
-                   FlowerColor color,
-                   double sepalLength) {
+    public Flower(double price,
+                  FlowerColor color,
+                  double sepalLength) {
 
         setPrice(price);
         setColor(color);
