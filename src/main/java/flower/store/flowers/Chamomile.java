@@ -11,7 +11,7 @@ public class Chamomile extends Flower {
     /**
      * creates a white chamomile
      */
-    public Chamomile(){
+    public Chamomile() {
         super();
         setColor(FlowerColor.WHITE);
         setFlowerType(FlowerType.CHAMOMILE);

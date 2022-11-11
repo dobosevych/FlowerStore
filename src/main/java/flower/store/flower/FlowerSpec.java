@@ -10,35 +10,36 @@ import lombok.ToString;
 
 @Getter @Setter @ToString
 public class FlowerSpec {
+    private FlowerColor color;
+    private double sepalLength;
     /**
      * constructor
      */
-    public FlowerSpec() {}
+    public FlowerSpec() { }
     /**
      * handles input
-     * @param color color of the flower
+     * @param clr color of the flower
      */
-    public void setColor(FlowerColor color) {
-        this.color = color;
+    public void setColor(FlowerColor clr) {
+        color = clr;
     }
 
     /**
      * handles input
-     * @param color color of the flower
+     * @param clr color of the flower
      */
-    public void setColor(String color) {
-        if (color.equalsIgnoreCase("red")) {
-            this.color = FlowerColor.RED;
+    public void setColor(String clr) {
+        if (clr.equalsIgnoreCase("red")) {
+            color = FlowerColor.RED;
         }
-        else if (color.equalsIgnoreCase("blue")) {
-            this.color = FlowerColor.BLUE;
+        else if (clr.equalsIgnoreCase("blue")) {
+            color = FlowerColor.BLUE;
         }
-        else if (color.equalsIgnoreCase("white")) {
-            this.color = FlowerColor.WHITE;
+        else if (clr.equalsIgnoreCase("white")) {
+            color = FlowerColor.WHITE;
         }
     }
 
-    private FlowerColor color;
-    private double sepalLength;
+
 
 }

@@ -11,14 +11,15 @@ import java.util.List;
  * */
 
 public class FlowerBucket {
-    /**
-     * constructor
-     */
-    public FlowerBucket() {}
     @Getter
     private int price = 0;
 
     private final List<FlowerPack> flowerPacks = new ArrayList<>();
+
+    /**
+     * constructor
+     */
+    public FlowerBucket() { }
 
     /**
      * adds flowerpacks to bucket

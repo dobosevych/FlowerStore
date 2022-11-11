@@ -7,16 +7,16 @@ public enum FlowerColor {
     /**
      * red
      */
-    RED("red"),//("#FF0000"),
+    RED("red"), //("#FF0000"),
     /**
      * blue
      */
 
-    BLUE("blue"),//("#0000FF"),
+    BLUE("blue"), //("#0000FF"),
     /**
      * white
      */
-    WHITE("white");//("#000000");
+    WHITE("white"); //("#000000");
     private final String stringRepresentation;
 
     /**

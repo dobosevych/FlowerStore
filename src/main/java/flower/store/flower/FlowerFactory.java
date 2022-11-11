@@ -7,7 +7,7 @@ public class FlowerFactory {
     /**
      * constructor
      */
-    public FlowerFactory() {}
+    public FlowerFactory() { }
     /**
      * creates flowers
      * @param price price of the flower

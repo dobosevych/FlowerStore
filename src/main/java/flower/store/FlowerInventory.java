@@ -1,8 +1,6 @@
 package flower.store;
 
 import flower.store.flower.Flower;
-import flower.store.flower.FlowerColor;
-import flower.store.flower.FlowerFactory;
 import flower.store.flower.FlowerSpec;
 
 import java.util.ArrayList;
@@ -15,28 +13,24 @@ import java.util.List;
 public class FlowerInventory {
     private final List<Flower> inventory = new ArrayList<>();
 
+
     /**
      * constructor for flower inventory
      * currently has only three flowers
      */
     public FlowerInventory() {
-        double rfp = 10;
-        double rsl = 0.5;
-        double bfp = 30;
-        double bsl = 2;
-        double wfp = 100;
-        double wsl = 10;
-        Flower redFlower = FlowerFactory
-                .createFlower(rfp, FlowerColor.RED, rsl);
-        Flower blueFlower = FlowerFactory
-                .createFlower(bfp, FlowerColor.BLUE, bsl);
-        Flower whiteFlower = FlowerFactory
-                .createFlower(wfp, FlowerColor.WHITE, wsl);
 
-        inventory.add(redFlower);
-        inventory.add(blueFlower);
-        inventory.add(whiteFlower);
 
+
+
+    }
+
+    /**
+     * adds flowers to inventory
+     * @param flower flower user wants to add
+     */
+    public void addFlower(Flower flower) {
+        inventory.add(flower);
     }
     /**
      * search tool to find flowers in the inventory

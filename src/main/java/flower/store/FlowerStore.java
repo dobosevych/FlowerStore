@@ -2,6 +2,8 @@
 package flower.store;
 
 import flower.store.flower.Flower;
+import flower.store.flower.FlowerColor;
+import flower.store.flower.FlowerFactory;
 import flower.store.flower.FlowerSpec;
 
 import java.util.List;
@@ -16,9 +18,9 @@ public class FlowerStore {
     /**
      * constructor
      */
-    private FlowerStore() {}
+    private FlowerStore() { }
     private static final
-    FlowerInventory flowerInventory = new FlowerInventory();
+    FlowerInventory FLOWER_INVENTORY = new FlowerInventory();
 
     /**
      * the main  method
@@ -26,6 +28,16 @@ public class FlowerStore {
      */
 
     public static void main(String[] args) {
+        Flower redFlower = FlowerFactory
+                .createFlower(10, FlowerColor.RED, 0.5);
+        Flower blueFlower = FlowerFactory
+                .createFlower(30, FlowerColor.BLUE, 2);
+        Flower whiteFlower = FlowerFactory
+                .createFlower(100, FlowerColor.WHITE, 10);
+        FLOWER_INVENTORY.addFlower(redFlower);
+        FLOWER_INVENTORY.addFlower(blueFlower);
+        FLOWER_INVENTORY.addFlower(whiteFlower);
+
         Scanner sc = new Scanner(System.in);
         System.out.print("Please, enter the color: ");
         String color = sc.nextLine();
@@ -47,6 +59,6 @@ public class FlowerStore {
         FlowerSpec searchSpec = new FlowerSpec();
         searchSpec.setSepalLength(sepalLength);
         searchSpec.setColor(color);
-        return flowerInventory.search(searchSpec);
+        return FLOWER_INVENTORY.search(searchSpec);
     }
 }

@@ -18,13 +18,14 @@ public class FlowerPackInventory extends FlowerPack {
 
     /**
      * takes flowers from flower pack
-     * @param newPackSize the amount of flowers user wants to take away from the inventory
+     * @param newPackSize the amount of flowers user wants
+     *                    to take away from the inventory
      * @return a new flower pack inventory with given amount of flowers
      */
-    public FlowerPack splitFLowerPack(int newPackSize){
-        if (newPackSize<=getQuantity()){
-            setQuantity(getQuantity()-newPackSize);
-            return new FlowerPack(getFlower(),newPackSize);
+    public FlowerPack splitFLowerPack(int newPackSize) {
+        if (newPackSize <= getQuantity()){
+            setQuantity(getQuantity() - newPackSize);
+            return new FlowerPack(getFlower(), newPackSize);
         }
         return null;
 
@@ -34,7 +35,7 @@ public class FlowerPackInventory extends FlowerPack {
      * adds flowers to pack
      * @param amount amount of flowers user wants to add to inventory
      */
-    public void addFLowers(int amount){
-        setQuantity(getQuantity()+amount);
+    public void addFLowers(int amount) {
+        setQuantity(getQuantity() + amount);
     }
 }

@@ -11,7 +11,7 @@ public class Rose extends Flower {
     /**
      * creates a red rose
      */
-    public Rose(){
+    public Rose() {
         super();
         setColor(FlowerColor.RED);
         setFlowerType(FlowerType.ROSE);

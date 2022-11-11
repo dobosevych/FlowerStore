@@ -19,7 +19,7 @@ public class Flower {
     /**
      * constructor
      */
-    public Flower() {}
+    public Flower() { }
 
     /**
      * getter for sepalLength

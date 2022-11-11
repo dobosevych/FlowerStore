@@ -11,7 +11,7 @@ public class Tulip extends Flower {
     /**
      *  creates a beautiful tulip
      */
-    public Tulip(){
+    public Tulip() {
         super();
         setColor(FlowerColor.RED);
         setFlowerType(FlowerType.TULIP);
