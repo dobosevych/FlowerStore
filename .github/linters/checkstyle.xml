@@ -74,7 +74,10 @@
         <!-- <module name="FinalClass"/> -->
         <module name="InterfaceIsType"/>
         <module name="MutableException"/>
-
+        <module name="HiddenField" >
+            <property name="ignoreSetter" value="true" />
+            <property name="ignoreConstructorParameter" value="true" />
+        </module>
 
         <!-- =========================================================================== -->
         <!-- Coding violations                                                           -->
