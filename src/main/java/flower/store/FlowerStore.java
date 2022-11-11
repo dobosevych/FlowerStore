@@ -2,7 +2,6 @@
 package flower.store;
 
 import flower.store.flower.Flower;
-import flower.store.flower.FlowerColor;
 import flower.store.flower.FlowerSpec;
 
 import java.util.List;
