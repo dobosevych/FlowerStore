@@ -9,28 +9,51 @@ import java.util.ArrayList;
 
 import java.util.List;
 
-
+/**
+ * flower inventory. here we store our flowers
+ */
 public class FlowerInventory {
     private final List<Flower> inventory = new ArrayList<>();
-    public FlowerInventory(){
 
-        Flower redFlower = FlowerFactory.createFlower(10, FlowerColor.RED, 0.5);
-        Flower blueFlower = FlowerFactory.createFlower(30, FlowerColor.BLUE, 2);
-        Flower whiteFlower = FlowerFactory.createFlower(100, FlowerColor.WHITE, 10);
+    /**
+     * constructor for flower inventory
+     * currently has only three flowers
+     */
+    public FlowerInventory() {
+        double rfp = 10;
+        double rsl = 0.5;
+        double bfp = 30;
+        double bsl = 2;
+        double wfp = 100;
+        double wsl = 10;
+        Flower redFlower = FlowerFactory
+                .createFlower(rfp, FlowerColor.RED, rsl);
+        Flower blueFlower = FlowerFactory
+                .createFlower(bfp, FlowerColor.BLUE, bsl);
+        Flower whiteFlower = FlowerFactory
+                .createFlower(wfp, FlowerColor.WHITE, wsl);
 
         inventory.add(redFlower);
         inventory.add(blueFlower);
         inventory.add(whiteFlower);
 
     }
-    public List<Flower> search(FlowerSpec searchSpec){
+    /**
+     * search tool to find flowers in the inventory
+     * @param searchSpec - is the specification for search
+     * @return a list of flowers which fit the specification
+     * */
+    public List<Flower> search(FlowerSpec searchSpec) {
+
         List<Flower> matchingFlowers = new ArrayList<>();
         for (Flower flower : inventory) {
             FlowerSpec flowerSpec = flower.getSpec();
-            if (searchSpec.getColor() != flowerSpec.getColor())
+            if (searchSpec.getColor() != flowerSpec.getColor()) {
                 continue;
-            if (searchSpec.getSepalLength() != flowerSpec.getSepalLength())
+            }
+            if (searchSpec.getSepalLength() != flowerSpec.getSepalLength()) {
                 continue;
+            }
             matchingFlowers.add(flower);
         }
         return matchingFlowers;

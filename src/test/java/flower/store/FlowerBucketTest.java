@@ -10,6 +10,11 @@ import org.junit.jupiter.api.Assertions;
 
 import java.util.Random;
 
+/**
+ * tests for flowerbucket
+ * @hidden
+ */
+
 public class FlowerBucketTest {
     private static final Random RANDOM_GENERATOR = new Random();
     private static final int MAX_QUANTITY = 1000;
@@ -17,11 +22,18 @@ public class FlowerBucketTest {
 
     private FlowerBucket flowerBucket;
 
+    /**
+     * setup
+     */
     @BeforeEach
     public void init() {
         flowerBucket = new FlowerBucket();
     }
 
+    /**
+     * test price
+     *
+     */
     @Test
     public void testPrice() {
         int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
