@@ -28,8 +28,7 @@ public class FlowerStore {
      */
 
     public static void main(String[] args) {
-        Flower redFlower = FlowerFactory
-                .createFlower(10, FlowerColor.RED, 0.5);
+        Flower redFlower = new Flower(10, FlowerColor.RED, 0.5);
         Flower blueFlower = FlowerFactory
                 .createFlower(30, FlowerColor.BLUE, 2);
         Flower whiteFlower = FlowerFactory

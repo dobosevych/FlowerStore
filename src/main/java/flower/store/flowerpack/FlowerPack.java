@@ -1,4 +1,4 @@
-package flower.store.flowerPack;
+package flower.store.flowerpack;
 
 import flower.store.flower.Flower;
 import lombok.Getter;
@@ -12,15 +12,6 @@ public class FlowerPack {
 
     private final Flower flower;
     private int quantity;
-
-    /**
-     * get price for all flowers in a pack
-     * @return the price of this amount of flowers
-     */
-
-    public double getPrice() {
-        return flower.getPrice() * quantity;
-    }
     /**
      *  flowerpack constructor
      * @param flower flower type the user wants to make a pack of
@@ -32,5 +23,15 @@ public class FlowerPack {
         this.flower = flower;
         this.quantity = quantity;
     }
+
+    /**
+     * get price for all flowers in a pack
+     * @return the price of this amount of flowers
+     */
+
+    public double getPrice() {
+        return flower.getPrice() * quantity;
+    }
+
 
 }

@@ -1,4 +1,4 @@
-package flower.store.flowerPack;
+package flower.store.flowerpack;
 
 import flower.store.flower.Flower;
 
@@ -23,7 +23,7 @@ public class FlowerPackInventory extends FlowerPack {
      * @return a new flower pack inventory with given amount of flowers
      */
     public FlowerPack splitFLowerPack(int newPackSize) {
-        if (newPackSize <= getQuantity()){
+        if (newPackSize <= getQuantity()) {
             setQuantity(getQuantity() - newPackSize);
             return new FlowerPack(getFlower(), newPackSize);
         }

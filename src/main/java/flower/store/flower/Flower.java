@@ -22,6 +22,21 @@ public class Flower {
     public Flower() { }
 
     /**
+     * constructor with parameters
+     * @param price price
+     * @param color color
+     * @param sepalLength sepalLength
+     */
+    public Flower (double price,
+                   FlowerColor color,
+                   double sepalLength) {
+
+        setPrice(price);
+        setColor(color);
+        setSepalLength(sepalLength);
+    }
+
+    /**
      * getter for sepalLength
      * @return sepalLength
      */
