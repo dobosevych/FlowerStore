@@ -6,7 +6,7 @@ import lombok.Setter;
 
 
 @Setter
-public abstract class Flower {
+public class Flower {
     @Getter
     private double sepalLength;
     private FlowerColor color;
@@ -19,7 +19,7 @@ public abstract class Flower {
         return color.toString();
     }
 
-    public Flower(Flower flower){
+    public Flower(Flower flower) {
         this.sepalLength = flower.sepalLength;
         this.color = flower.color;
         this.flowerType = flower.flowerType;

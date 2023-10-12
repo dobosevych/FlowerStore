@@ -3,19 +3,16 @@ package flower.store;
 import java.util.ArrayList;
 import java.util.List;
 
-import lombok.Getter;
-import lombok.Setter;
-
 // @Getter @Setter
 public class FlowerBucket {
 
-    List<FlowerPack> FlowerPacks = new ArrayList<>();
+    private List<FlowerPack> FlowerPacks = new ArrayList<>();
 
-    public void addFlowerPack(FlowerPack flowerPacks){
+    public void addFlowerPack(FlowerPack flowerPacks) {
         FlowerPacks.add(flowerPacks);
     }
 
-    public double getPrice(){
+    public double getPrice() {
 
     }
 
